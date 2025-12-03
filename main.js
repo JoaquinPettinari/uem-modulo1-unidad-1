@@ -6,3 +6,4 @@ function render() {
 }
 
 render();
+setupDonationLogic();
