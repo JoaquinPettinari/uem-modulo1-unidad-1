@@ -17,15 +17,30 @@ function ProjectBody() {
 
           <div class="target-container">
             <div class="current">
-              <span class="target-status">Necesitamos tu dinero</span>
+              <div class="icon-container">
+                <img src="/images/emblem-urgent-svgrepo-com.svg" alt="Emergency icon" class="icon"/>
+                <span class="target-status">Necesitamos tu dinero</span>
+              </div>
               <span id="total-donations" class="actual-donation">$55.232</span>
-              <span class="target">Objetivo: $1.500.000</span>
+              <div class="icon-container">
+                <img src="/images/target-svgrepo-com.svg" alt="share icon" class="icon" />
+                <span class="target">Objetivo: $1.500.000</span>
+              </div>
             </div>
-            <span>aca va el stroke</span>
+            <div class="progress-circle">
+              <svg width="120" height="120">
+                <circle class="bg" cx="60" cy="60" r="50"/>
+                <circle class="progress" cx="60" cy="60" r="50"/>
+              </svg>
+              <span class="percentage">0%</span>
+            </div>
           </div>
 
           <hr />
-          <button class="share">Share</button>
+          <button class="share">
+            <img src="/images/share-svgrepo-com.svg" alt="share icon" class="icon"/>
+            Share
+          </button>
         </section>
 
         <section class="donation-box">
@@ -67,6 +82,7 @@ function setupDonationLogic() {
   input.value = defaultValue
 
   let total = 55_232;
+  updateProgress(total);
 
   buttons.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -100,5 +116,6 @@ function setupDonationLogic() {
 
     buttons.forEach(b => b.classList.remove("selected"));
     defaultBtn.classList.add("selected")
+    updateProgress(total);
   });
 }

@@ -7,6 +7,11 @@
   min-width: 60%;
 }
 
+.project-body .icon {
+  width: 20px;
+  height: 20px;
+}
+
 .project-body .aside {
   display: flex;
   flex-direction: column;
@@ -72,6 +77,10 @@
   font-weight: 700;
   padding: .6875rem 1rem;
   margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
 }
 
 .project-body .share:hover {
@@ -156,4 +165,46 @@
 .project-body .donate-button:hover {
   background-color: #e55588;
   outline: 1px solid #e55588;
+}
+
+.project-body .icon-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Logica del strike */
+.progress-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.progress-circle svg {
+  transform: rotate(-90deg);
+}
+
+.bg {
+  fill: none;
+  stroke: #ddd;
+  stroke-width: 12;
+}
+
+.progress {
+  fill: none;
+  stroke: #00b894;
+  stroke-width: 12;
+  stroke-linecap: round;
+  stroke-dasharray: 314;
+  stroke-dashoffset: 314;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 22px;
 }
