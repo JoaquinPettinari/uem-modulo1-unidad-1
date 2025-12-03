@@ -1,6 +1,5 @@
 body {
   max-width: 1024px;
-  padding: 16px;
   margin: 0 auto;
   font-family: Avenir,
     Helvetica,
@@ -8,6 +7,9 @@ body {
     sans-serif;
   color: #333;
   background-color: #fefefe;
+  height: 100vh;
+  padding: 16px;
+  box-sizing: border-box;
 }
 
 h1,
@@ -17,4 +19,17 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+.article .grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 24px;
+}
+
+@media (max-width: 750px) {
+  .article .grid {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
 }
