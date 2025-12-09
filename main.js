@@ -1,7 +1,8 @@
 function render() {
   document.getElementById("app").innerHTML = `
+    ${Header()}
     <article class="article">
-      ${Header()}
+      ${Title()}
       <div class="grid">
         <div>
           ${ProjectBody()}

@@ -1,6 +1,4 @@
 body {
-  max-width: 1024px;
-  margin: 0 auto;
   font-family: Avenir,
     Helvetica,
     Arial,
@@ -8,8 +6,14 @@ body {
   color: #333;
   background-color: #fefefe;
   height: 100vh;
-  padding: 16px;
+  margin: 0;
   box-sizing: border-box;
+}
+
+body .article {
+  padding: 16px;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 h1,
